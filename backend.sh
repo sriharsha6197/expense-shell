@@ -6,6 +6,8 @@ dnf module enable nodejs:18 -y    &>> /tmp/expense.log
 echo installing nodejs
 dnf install nodejs -y     &>> /tmp/expense.log
 
+rm -rf /app
+
 echo adding user
 useradd sri       &>> /tmp/expense.log
 
