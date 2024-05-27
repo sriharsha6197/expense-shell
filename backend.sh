@@ -1,3 +1,4 @@
+pwd=$PWD
 echo disabling and enabling latest nodejs module
 dnf module disable nodejs -y      &>> /tmp/expense.log
 dnf module enable nodejs:18 -y    &>> /tmp/expense.log
@@ -20,7 +21,7 @@ echo downloading dependencies
 npm install       &>> /tmp/expense.log
 
 echo copying backend service
-cp backend.service /etc/systemd/system/backend.service     &>> /tmp/expense.log
+cp $pwd/backend.service /etc/systemd/system/backend.service     &>> /tmp/expense.log
 
 
 echo enabling backend and restarting backend service
