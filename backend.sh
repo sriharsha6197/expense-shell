@@ -32,4 +32,4 @@ echo installing mysql client
 dnf install mysql -y   &>> /tmp/expense.log
 
 echo loading database
-mysql -h mysql.sriharsha.shop -uroot -pExpenseApp@1 < /app/schema/backend.sql    &>> /tmp/expense.log
+mysql -h mysql.sriharsha.shop -uroot -pSriHarsha@1 < /app/schema/backend.sql    &>> /tmp/expense.log
