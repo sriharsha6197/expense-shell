@@ -1,6 +1,3 @@
-echo update packages
-dnf update -y  &>> /tmp/expense.log
-
 echo install nginx
 dnf install nginx -y &>> /tmp/expense.log
 
