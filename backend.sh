@@ -17,8 +17,8 @@ echo copying backend service
 cp backend.service /etc/systemd/system/backend.service     &>> /tmp/expense.log
 
 echo downloading backend content and going to the created directory and unzipping backend content
+cd /app
 curl -sl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip  &>> /tmp/expense.log
-cd /app 
 unzip /tmp/backend.zip     &>> /tmp/expense.log
 
 echo downloading dependencies
