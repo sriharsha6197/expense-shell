@@ -12,7 +12,7 @@ systemctl enable mysqld
 systemctl start mysqld  
 
 echo checking secure connnection
-mysql_secure_installation --set-root-pass SriHarsha@1
+mysql_secure_installation --set-root-pass ExpenseApp@1
 
 echo connecting to the database
-mysql -uroot -pSriHarsha@1
+mysql -uroot -pExpenseApp@1
