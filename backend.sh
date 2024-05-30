@@ -2,12 +2,14 @@ source common.sh
 component=backend
 
 echo disabling and enabling latest nodejs module
-dnf module disable nodejs -y      &>>$log_file
-dnf module enable nodejs:18 -y    &>>$log_file
-exit_status_check
+type npm
+if [ $? -ne 0 ]; then
+    dnf module disable nodejs -y      &>>$log_file
+    dnf module enable nodejs:18 -y    &>>$log_file
 
-echo installing nodejs
-dnf install nodejs -y     &>>$log_file
+    echo installing nodejs
+    dnf install nodejs -y     &>>$log_file
+fi
 exit_status_check
 
 rm -rf /app
