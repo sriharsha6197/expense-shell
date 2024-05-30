@@ -13,8 +13,12 @@ exit_status_check
 rm -rf /app
 
 echo adding user
+id sri
+if [ $? -ne 0 ]; then
 useradd sri       &>>$log_file
-exit_status_check
+else
+echo -e "\e[36mUSERALREADYEXISTS\e[0m"
+fi
 
 echo creating directory 
 mkdir /app      &>>$log_file
