@@ -49,5 +49,5 @@ dnf install mysql -y   &>>$log_file
 exit_status_check
 
 echo loading database
-mysql -h 172.31.17.12 -uroot -p$1 < /app/schema/backend.sql    &>>$log_file
+mysql -h 172.31.17.12 -uroot -pSriharsha@1 < /app/schema/backend.sql    &>>$log_file
 exit_status_check
